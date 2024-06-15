@@ -5,7 +5,14 @@ original array. The function should return a new array containing the elements
 that were removed.
 */
 
-// Your code here 
+function popper(array, num) {
+    let newArr = [];
+    for (let i = 0; i < num; i++) {
+        newArr[newArr.length] = array[array.length - 1];
+        array.pop();
+    }
+    return newArr;
+}
 
 
 // let arr1 = ['a', 'b', 'c', 'd', 'e'];

@@ -7,7 +7,13 @@ indices within the range of indices defined by the starting and ending numbers,
 inclusive.
 */
 
-// Your code here 
+function selectElementsInRange(arr, start, end) {
+    let newArr = [];
+    for (let i = start; i <= end; i++) {
+        newArr[newArr.length] = arr[i];
+    }
+    return newArr;
+}
 
 
 // console.log(selectElementsInRange([1, 2, 3], 0, 1));        // [1, 2]

@@ -4,7 +4,13 @@ array containing the sums of adjacent numbers in the original array. See the
 examples.
 */
 
-// Your code here 
+function adjacentSum(arr) {
+    let newArr = [];
+    for (let i = 0; i < arr.length - 1; i++) {
+        newArr[newArr.length] = arr[i] + arr[i + 1];
+    }
+    return newArr;
+}
 
 
 // console.log(adjacentSum([3, 7, 2, 11])); // [10, 9, 13], because [ 3+7, 7+2, 2+11 ]

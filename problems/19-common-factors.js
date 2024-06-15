@@ -4,7 +4,21 @@ function should return an array containing positive numbers that are able to
 divide both arguments.
 */
 
-// Your code here 
+function commonFactors(num1, num2) {
+    let arr = [];
+    let min;
+    if (num1 < num2) {
+        min = num1;
+    } else {
+        min = num2;
+    }
+    for (let i = 1; i <= min; i++) {
+        if (num1 % i === 0 && num2 % i === 0) {
+            arr[arr.length] = i;
+        }
+    }
+    return arr;
+}
 
 
 // console.log(commonFactors(4, 8));              // [1, 2, 4]

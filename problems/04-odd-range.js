@@ -3,7 +3,15 @@ Define a function called oddRange that takes in a number parameter and returns
 an array  containing all positive odd numbers up to that number.
 */
 
-// Your code here 
+function oddRange(num) {
+    let arr = [];
+    for (let i = 1; i <= num; i++) {
+        if (i % 2 !== 0) {
+            arr[arr.length] = i;
+        }
+    }
+    return arr;
+}
 
 
 // console.log(oddRange(13)); // => [ 1, 3, 5, 7, 9, 11, 13 ]

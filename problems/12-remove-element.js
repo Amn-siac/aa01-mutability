@@ -6,7 +6,13 @@ elements. The third parameter should be the number of elements that need to be
 removed from the array. See test cases for examples.
 */
 
-// Your code here 
+function removeElements(arr, start, removal) {
+    if (start > arr.length || start < 0) {
+        return [];
+    }
+    arr.splice(start, removal);
+    return arr;
+}
 
 
 // console.log(removeElements([1, 2, 3], 1, 1));       // [1, 3]

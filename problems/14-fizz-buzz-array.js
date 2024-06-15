@@ -4,7 +4,19 @@ should return an array containing all positive numbers less than max that are
 divisible by either 3 or 5, but not both.
 */
 
-// Your code here 
+function fizzBuzz(max) {
+    let arr = [];
+    for (let i = 1; i < max; i++) {
+        if (i % 15 === 0) {
+            // do nothing
+        } else if (i % 5 === 0) {
+            arr[arr.length] = i;
+        } else if (i % 3 === 0) {
+            arr[arr.length] = i;
+        }
+    }
+    return arr;
+}
 
 
 // console.log(fizzBuzz(12)); // [ 3, 5, 6, 9, 10 ]

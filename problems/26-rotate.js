@@ -5,7 +5,21 @@ right. When the num is negative, the elements of the array should be rotated to
 the left. The function should mutate the original array.
 */
 
-// Your code here 
+function rotate(array, num) {
+    let temp = 0;
+    while (num !== 0) {
+        if (num > 0) {
+            temp = array.pop();
+            array.unshift(temp);
+            num--
+        } else if (num < 0) {
+            temp = array.shift();
+            array.push(temp);
+            num++
+        }
+    }
+    return array;
+}
 
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];

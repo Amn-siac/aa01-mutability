@@ -7,7 +7,22 @@ array and instead return a new array.
 HINT: you can use Array's slice() method to create a copy of an array
 */
 
-// Your code here 
+function rotateRight(array, num) {
+    let newArr = array.slice();
+    let temp = [];
+    while (num !== 0) {
+        if (num > 0) {
+            temp = newArr.pop();
+            newArr.unshift(temp);
+            num--
+        } else {
+            break;
+        }
+    }
+    return newArr;
+}
+
+
 
 
 // let arr = ['a', 'b', 'c', 'd', 'e'];

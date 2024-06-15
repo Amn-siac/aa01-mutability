@@ -4,7 +4,19 @@ should return an array containing all positive numbers less than or equal to max
 that are divisible by either 4 or 6, but not both.
 */
 
-// Your code here 
+function pitPat(max) {
+    let arr = [];
+    for (let i = 0; i <= max; i++) {
+        if (i % 12 === 0) {
+            // do nothing
+        } else if (i % 6 === 0) {
+            arr[arr.length] = i;
+        } else if (i % 4 === 0) {
+            arr[arr.length] = i;
+        }
+    }
+    return arr;
+}
 
 
 // console.log(pitPat(18)); // [ 4, 6, 8, 16, 18 ]
